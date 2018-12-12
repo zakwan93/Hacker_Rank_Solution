@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <style>
+      body {
+        background-color: #1d2126;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Github users!</h1>
+    <div id="results"></div>
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script>
+        var users = ['octocat','yaviner','gaearon','sdras']
+        var gh_users = {};
+        console.log(gh_users)
+        for (let i= 0; i < users.length; i++) {
+          $.ajax({
+            url: `https://aux-interview-service.herokuapp.com/github/users/${users[i]}`,
+            method: 'GET'
+          })
+          .done(function(res) {
+            console.log(res);
+            gh_users[users[i]] = {name: res.name, foll: res.followers}
+            if (Object.keys(gh_users).length == users.length) {
+              for (let j= 0; j < users.length; j++) {
+              $('#results').append(
+              `<div>Result ${j}: ${users[j]} has ${gh_users[users[j]].foll} followers!</div>`);
+              }
+            }
+
+          })
+        }
+        
+    </script>
+  </body>
+</html>
