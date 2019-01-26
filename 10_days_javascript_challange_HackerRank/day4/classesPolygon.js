@@ -27,18 +27,15 @@
 // Answer
 
 class Polygon{
-	constructor(heights){
-		let poly_parimeters = 0;
+    constructor(heights) {
+        let poly_parameters = 0;
+        for (let index in heights) {
+            poly_parameters += heights[index];
+        }
+        this.my_perimeter = poly_parameters;
+    }
 
-		for(let index in heights){
-			poly_parimeters += heights[index];
-		}
-
-		this.perimeter = poly_parimeters;
-	}
-
-	perimeter(){
-		return this.perimeter;
-	}
-
+    perimeter() {
+        return this.my_perimeter;
+    }
 }
