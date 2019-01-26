@@ -16,9 +16,11 @@
 // Answer
 
 function rolDice(input){
-  let myInput = input.split('');
-  let number = myInput[0];
-  let rollDice  = parseInt(input.slice(2)); 
+  let myInput = input.split('d');
+  // console.log(myInput);
+  let number = parseInt(myInput[0]);
+  // console.log(number);
+  let rollDice  = parseInt(myInput[1]); 
   let random = []; 
   for (let i=0; i<number; i++){
     let randomNumber = Math.random();
@@ -29,4 +31,4 @@ function rolDice(input){
   console.log("dice: " + number + " rolls: [" + random +"]");
 }
 
-console.log(rolDice("3d100"));
+console.log(rolDice("10d100"));
