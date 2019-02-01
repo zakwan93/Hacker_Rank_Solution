@@ -17,4 +17,4 @@ function productofarr(arr){
   console.log(myArr);
 }
 
-console.log(productofarr([2,4,6]));
+console.log(productofarr([2,4,6]));s
