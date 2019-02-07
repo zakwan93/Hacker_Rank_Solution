@@ -23,7 +23,7 @@ function rolDice(input){
   let rollDice  = parseInt(myInput[1]); 
   let random = []; 
   for (let i=0; i<number; i++){
-    let randomNumber = Math.random();
+    // let randomNumber = Math.random();
     let n = Math.random() * rollDice;
     let n1 = Math.ceil(n);
     random.push(n1);

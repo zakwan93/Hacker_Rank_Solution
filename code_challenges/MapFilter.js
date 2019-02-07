@@ -17,3 +17,32 @@ displayYears = years
 			   .map(year => `${year} A.D.`);
 
 console.log(displayYears);
+
+// ------------------------------------------------------------------------------
+
+const userNames = ['Samir', 'Angela', 'Beatrice', 'Shaniqua', 'Marvin', 'Sean'];
+    // Result: [{name: 'Samir'}, {name: 'Shaniqua'}, {name:'Sean'}];
+
+const userStartWithS = userNames
+                      .filter(user => user[0] === "S")
+                      .map(user => ({ user }));
+  
+console.log(userStartWithS);
+
+// ------------------------------------------------------------------------------
+
+const users = [
+  {name: 'Samir', age: 27},
+  {name: 'Angela', age: 33},
+  {name: 'Beatrice', age: 42},
+  {name: 'Shaniqua', age: 30},
+  {name: 'Marvin', age: 23},
+  {name: 'Sean', age: 47}
+];
+
+    // Result: ['Angela', 'Beatrice', 'Shaniqua', 'Sean'];
+
+const userAgeMoreThan30 = users
+                          .filter(user => user.age >= 30)
+                          .map(user => user.name);
+console.log(userAgeMoreThan30);
