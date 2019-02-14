@@ -30,6 +30,7 @@
 // Sample Output 1
 // 3
 
+
 function migratoryBirds(arr) {
 	const myObj = {};
 	for(let i=0; i<arr.length; i++){
